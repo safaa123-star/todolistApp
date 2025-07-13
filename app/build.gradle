@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    namespace 'com.example.todolistapp'  // أضيفي هذا السطر، غيريه حسب معرف تطبيقك
+    compileSdk 33
     defaultConfig {
-        applicationId "com.example.todolistapp"
-        minSdkVersion 21
-        targetSdkVersion 33
+        applicationId "com.example.todolistapp"  // تأكدي أنها تتطابق مع namespace إلا إذا كنتِ تريدين فرقًا
+        minSdk 21
+        targetSdk 33
         versionCode 1
         versionName "1.0"
     }
@@ -19,9 +19,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.0'
+    implementation 'com.google.android.material:material:1.9.0'
+    // أضيفي تبعياتك الأخرى هنا
 }
